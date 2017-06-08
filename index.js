@@ -14,13 +14,13 @@ function handler(cmd) {
     case 'help':
       return help()
     case 'add':
-      return add()
+      return add(rest)
     case 'ls':
       return ls()
     case 'rm':
-      return rm()
+      return rm(rest[0])
     case 'check':
-      return check()
+      return check(rest[0])
     default:
       return 'Welcome to my todo app'
   }

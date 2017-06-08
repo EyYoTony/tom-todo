@@ -1,7 +1,16 @@
 const {get, set} = require('../lib/store.js')
+const ls = require('./ls')
+module.exports = function(theRest){
+  const list = get()
+  set([...list, createObj(theRest)])
+  ls()
+}
 
-module.exports = function(todo){
-  console.log(get())
-
-
+function createObj(v){
+  var newObj = {
+  text: v.join(" "),
+  complete: false,
+  id: get().length +1
+  }
+  return newObj
 }
