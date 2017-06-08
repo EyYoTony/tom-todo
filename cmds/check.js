@@ -4,20 +4,25 @@ const ls = require('./ls')
 const { filter, curry, when, map } = require('ramda')
 
 module.exports = function(id){
-const list = get()
-trace(map(x => when(checkId(id, x), x.completed = !x.completed),list))
-ls()
+  const list = get()
+  set(map(x => changeObj(id,x), list))
+  ls()
+}
+
+function changeObj(id, obj){
+  if(checkId(id,obj)){
+    return flipCompleted(obj)
+  }
+  else{
+    return obj
+  }
 }
 
 function  checkId(idIn, obj) {
-return obj.id  == idIn
+  return obj.id  == idIn
 }
 
 function flipCompleted(obj) {
-  return !obj.completed
-}
-
-const trace = function (v){
-console.log(v)
-return v
+  obj.completed = !obj.completed
+  return obj
 }

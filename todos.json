@@ -1,18 +1,15 @@
 [
   {
-    "text": "DOnekys are good",
-    "complete": false,
-    "id": 1
-  },
-  {
     "text": "DOnekys are great",
     "complete": false,
-    "id": 2
+    "id": 2,
+    "completed": false
   },
   {
     "text": "DOnekys are talkers",
     "complete": false,
-    "id": 3
+    "id": 3,
+    "completed": true
   },
   {
     "text": "DOnekys are are sometimes green",
