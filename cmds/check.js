@@ -1,7 +1,7 @@
 const { get, set } = require('../lib/store.js')
 const ls = require('./ls')
 
-const { filter, curry, when, map } = require('ramda')
+const { filter, map } = require('ramda')
 
 module.exports = function(id){
   const list = get()
