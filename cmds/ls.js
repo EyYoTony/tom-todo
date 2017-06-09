@@ -2,11 +2,13 @@ const {get, set} = require('../lib/store')
 const {map, filter, reduce} = require('ramda')
 module.exports = function(){
   const todoList = get()
-  console.log(`      TODO List`)
+  console.log(`\n        TODO List`)
   console.log(`-----------------------`)
   map(printObj, todoList)
   console.log(`-----------------------`)
   console.log(`${countComplete(todoList)} finished   ${todoList.length} total`)
+
+  return `${countComplete(todoList) / todoList.length * 100}% complete.`
 }
 
 function countComplete(list){

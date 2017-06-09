@@ -6,23 +6,27 @@
     "completed": false
   },
   {
-    "text": "testing testing 123",
+    "text": "i changed this again",
     "complete": false,
-    "id": 2
+    "id": 2,
+    "completed": true
   },
   {
     "text": "testing testing 1234",
     "complete": false,
-    "id": 3
+    "id": 3,
+    "completed": true
   },
   {
     "text": "testing testing 12345",
     "complete": false,
-    "id": 4
+    "id": 4,
+    "completed": false
   },
   {
     "text": "testing testing 123456",
     "complete": false,
-    "id": 5
+    "id": 5,
+    "completed": false
   }
 ]

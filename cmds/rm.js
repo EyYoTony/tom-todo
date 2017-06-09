@@ -5,7 +5,7 @@ const { filter, curry, mapAccum } = require('ramda')
 module.exports = function(id){
   const list = get()
   set(mapAccum(reducer, 1, filter(x => !isId(id,x),list))[1])
-  ls()
+  return ls()
 }
 
 

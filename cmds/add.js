@@ -3,7 +3,7 @@ const ls = require('./ls')
 module.exports = function(theRest){
   const list = get()
   set([...list, createObj(theRest)])
-  ls()
+  return ls()
 }
 
 function createObj(v){

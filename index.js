@@ -8,6 +8,9 @@ const add = require('./cmds/add')
 const ls = require('./cmds/ls')
 const rm = require('./cmds/rm')
 const check = require('./cmds/check')
+const edit = require('./cmds/edit')
+const {slice} = require('ramda')
+
 
 function handler(cmd) {
   switch(cmd.toLowerCase()) {
@@ -21,6 +24,8 @@ function handler(cmd) {
       return rm(rest[0])
     case 'check':
       return check(rest[0])
+    case 'edit':
+      return (edit(rest[0],slice(1,Infinity,rest).join(' ')))
     default:
       return 'Welcome to my todo app'
   }

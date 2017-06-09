@@ -6,7 +6,7 @@ const { filter, map } = require('ramda')
 module.exports = function(id){
   const list = get()
   set(map(x => changeObj(id,x), list))
-  ls()
+  return ls()
 }
 
 function changeObj(id, obj){
